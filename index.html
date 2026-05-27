@@ -22,15 +22,22 @@
             display: flex; flex-direction: column; align-items: center;
         }
 
-        /* Sekcja profilowa */
+        /* Sekcja nagłówka (logo obok h1) */
+        .header-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .logo-img { width: 60px; }
+        h1 { font-size: 3.5rem; margin: 0; color: var(--accent); text-transform: uppercase; }
+        
         .profile-img { 
             width: 200px; height: 200px; border-radius: 50%; 
-            border: 4px solid var(--accent); margin-bottom: 1.5rem;
+            border: 4px solid var(--accent); margin: 1.5rem 0;
             object-fit: cover; box-shadow: 0 0 20px rgba(76, 201, 240, 0.3);
         }
-        .logo-img { width: 100px; margin-bottom: 1rem; }
-        
-        h1 { font-size: 3.5rem; margin: 0; color: var(--accent); text-transform: uppercase; }
         p { font-size: 1.5rem; margin-bottom: 3rem; opacity: 0.8; }
 
         /* Przyciski */
@@ -43,43 +50,16 @@
         }
         .btn img { width: 2rem; height: 2rem; margin-right: 1rem; }
         
-        /* Kolory indywidualne */
+        /* Indywidualne kolory przycisków */
         .btn-twitch:hover { background: #9146FF; border-color: #9146FF; color: white; }
         .btn-fb:hover { background: #1877F2; border-color: #1877F2; color: white; }
-        .btn-insta:hover { background: #E1306C; border-color: #E1306C; color: white; }
         .btn-yt:hover { background: #FF0000; border-color: #FF0000; color: white; }
+        .btn-insta:hover { 
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            border-color: #e1306c; 
+            color: white; 
+        }
 
         .video-section { width: 100%; max-width: 800px; margin-bottom: 3rem; }
         .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; border: 2px solid var(--accent); }
-        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-
-        footer { padding: 2rem; opacity: 0.5; }
-    </style>
-</head>
-<body>
-
-<div class="container">
-    <img src="/images/logo.svg" alt="Logo" class="logo-img">
-    <img src="/images/cyberphoto.png" alt="Szakal701" class="profile-img">
-    <h1>Szakal701</h1>
-    <p>Fotografia i Kosmiczne Klimaty</p>
-
-    <div class="social-grid">
-        <a href="LINK_TWITCH" class="btn btn-twitch"><img src="/images/twitch.svg" alt="T"> Twitch</a>
-        <a href="LINK_FB" class="btn btn-fb"><img src="/images/facebook.svg" alt="F"> Facebook</a>
-        <a href="LINK_INSTA" class="btn btn-insta"><img src="/images/instagram.svg" alt="I"> Instagram</a>
-        <a href="LINK_YT" class="btn btn-yt"><img src="/images/youtube.svg" alt="Y"> YouTube</a>
-    </div>
-
-    <section class="video-section">
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/videoseries?list=PLai45ECCqPtHeADexHAbxQ7758GsRKPl_" 
-                    title="YouTube playlist" frameborder="0" allowfullscreen></iframe>
-        </div>
-    </section>
-</div>
-
-<footer><p>© 2026 Szakal701</p></footer>
-
-</body>
-</html>
+        .video-container iframe { position: absolute; top: 0; left
