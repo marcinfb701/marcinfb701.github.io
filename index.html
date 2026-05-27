@@ -12,83 +12,66 @@
         }
 
         body {
-            margin: 0;
-            padding: 0;
-            background: var(--space-bg);
-            color: white;
-            font-family: 'Segoe UI', sans-serif;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            margin: 0; padding: 0; background: var(--space-bg);
+            color: white; font-family: 'Segoe UI', sans-serif;
+            min-height: 100vh; display: flex; flex-direction: column; align-items: center;
         }
 
         .container { 
-            width: 90%; 
-            max-width: 1200px; 
-            padding: 2rem; 
-            flex: 1; /* To spycha stopkę na dół */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            width: 90%; max-width: 1200px; padding: 2rem; flex: 1;
+            display: flex; flex-direction: column; align-items: center;
         }
+
+        /* Sekcja profilowa */
+        .profile-img { 
+            width: 200px; height: 200px; border-radius: 50%; 
+            border: 4px solid var(--accent); margin-bottom: 1.5rem;
+            object-fit: cover; box-shadow: 0 0 20px rgba(76, 201, 240, 0.3);
+        }
+        .logo-img { width: 100px; margin-bottom: 1rem; }
         
-        h1 { font-size: 4rem; margin-bottom: 0.5rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.2rem; }
+        h1 { font-size: 3.5rem; margin: 0; color: var(--accent); text-transform: uppercase; }
         p { font-size: 1.5rem; margin-bottom: 3rem; opacity: 0.8; }
 
-        .social-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            width: 100%;
-            margin-bottom: 5rem;
-        }
-
+        /* Przyciski */
+        .social-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; width: 100%; margin-bottom: 5rem; }
         .btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1.5rem;
-            border: 2px solid var(--accent);
-            color: var(--accent);
-            text-decoration: none;
-            border-radius: 1rem;
-            font-size: 1.5rem;
-            font-weight: bold;
-            background: var(--glass);
-            transition: all 0.3s ease;
+            display: flex; align-items: center; justify-content: center; padding: 1.2rem;
+            border: 2px solid var(--accent); color: var(--accent); text-decoration: none;
+            border-radius: 1rem; font-size: 1.2rem; font-weight: bold;
+            background: var(--glass); transition: all 0.3s ease;
         }
-
-        .btn:hover { background: var(--accent); color: #000; transform: scale(1.05); }
-        .btn img { width: 3rem; height: 3rem; margin-right: 1.5rem; }
+        .btn img { width: 2rem; height: 2rem; margin-right: 1rem; }
+        
+        /* Kolory indywidualne */
+        .btn-twitch:hover { background: #9146FF; border-color: #9146FF; color: white; }
+        .btn-fb:hover { background: #1877F2; border-color: #1877F2; color: white; }
+        .btn-insta:hover { background: #E1306C; border-color: #E1306C; color: white; }
+        .btn-yt:hover { background: #FF0000; border-color: #FF0000; color: white; }
 
         .video-section { width: 100%; max-width: 800px; margin-bottom: 3rem; }
         .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; border: 2px solid var(--accent); }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
-        footer { padding: 2rem; opacity: 0.5; text-align: center; }
-
-        @media (max-width: 600px) {
-            h1 { font-size: 2.5rem; }
-            .btn { font-size: 1.2rem; }
-        }
+        footer { padding: 2rem; opacity: 0.5; }
     </style>
 </head>
 <body>
 
 <div class="container">
+    <img src="/images/logo.svg" alt="Logo" class="logo-img">
+    <img src="/images/cyberphoto.png" alt="Szakal701" class="profile-img">
     <h1>Szakal701</h1>
     <p>Fotografia i Kosmiczne Klimaty</p>
 
     <div class="social-grid">
-        <a href="LINK_DO_TWITCH" class="btn"><img src="/images/twitch.svg" alt="Twitch"> Twitch</a>
-        <a href="LINK_DO_FB" class="btn"><img src="/images/facebook.svg" alt="Facebook"> Facebook</a>
-        <a href="LINK_DO_INSTA" class="btn"><img src="/images/instagram.svg" alt="Instagram"> Instagram</a>
-        <a href="LINK_DO_YT" class="btn"><img src="/images/youtube.svg" alt="YouTube"> YouTube</a>
+        <a href="LINK_TWITCH" class="btn btn-twitch"><img src="/images/twitch.svg" alt="T"> Twitch</a>
+        <a href="LINK_FB" class="btn btn-fb"><img src="/images/facebook.svg" alt="F"> Facebook</a>
+        <a href="LINK_INSTA" class="btn btn-insta"><img src="/images/instagram.svg" alt="I"> Instagram</a>
+        <a href="LINK_YT" class="btn btn-yt"><img src="/images/youtube.svg" alt="Y"> YouTube</a>
     </div>
 
     <section class="video-section">
-        <h2>Moje najnowsze filmy</h2>
         <div class="video-container">
             <iframe src="https://www.youtube.com/embed/videoseries?list=PLai45ECCqPtHeADexHAbxQ7758GsRKPl_" 
                     title="YouTube playlist" frameborder="0" allowfullscreen></iframe>
@@ -96,9 +79,7 @@
     </section>
 </div>
 
-<footer>
-    <p>© 2026 Szakal701 | Kosmiczne klimaty</p>
-</footer>
+<footer><p>© 2026 Szakal701</p></footer>
 
 </body>
 </html>
