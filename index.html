@@ -22,15 +22,9 @@
             display: flex; flex-direction: column; align-items: center;
         }
 
-        /* Sekcja nagłówka (logo obok h1) */
-        .header-wrapper {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-        .logo-img { width: 60px; }
+        /* Sekcja nagłówka */
+        .header-wrapper { display: flex; align-items: center; justify-content: center; gap: 1rem; margin-bottom: 0.5rem; }
+        .logo-img { width: 60px; height: auto; }
         h1 { font-size: 3.5rem; margin: 0; color: var(--accent); text-transform: uppercase; }
         
         .profile-img { 
@@ -50,16 +44,48 @@
         }
         .btn img { width: 2rem; height: 2rem; margin-right: 1rem; }
         
-        /* Indywidualne kolory przycisków */
         .btn-twitch:hover { background: #9146FF; border-color: #9146FF; color: white; }
         .btn-fb:hover { background: #1877F2; border-color: #1877F2; color: white; }
         .btn-yt:hover { background: #FF0000; border-color: #FF0000; color: white; }
         .btn-insta:hover { 
-            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-            border-color: #e1306c; 
-            color: white; 
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            border-color: #e1306c; color: white; 
         }
 
         .video-section { width: 100%; max-width: 800px; margin-bottom: 3rem; }
         .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; border: 2px solid var(--accent); }
-        .video-container iframe { position: absolute; top: 0; left
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+        footer { padding: 2rem; opacity: 0.5; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header-wrapper">
+        <img src="/images/logo.svg" alt="Logo" class="logo-img">
+        <h1>Szakal701</h1>
+    </div>
+    
+    <img src="/images/cyberphoto.png" alt="Szakal701" class="profile-img">
+    <p>Fotografia i Kosmiczne Klimaty</p>
+
+    <div class="social-grid">
+        <a href="https://www.twitch.tv/szakal701" class="btn btn-twitch"><img src="/images/twitch.svg" alt="T"> Twitch</a>
+        <a href="https://www.facebook.com/marcin.biernat.338" class="btn btn-fb"><img src="/images/facebook.svg" alt="F"> Facebook</a>
+        <a href="https://www.instagram.com/marcin.fb.701/" class="btn btn-insta"><img src="/images/instagram.svg" alt="I"> Instagram</a>
+        <a href="https://www.youtube.com/@szakal700" class="btn btn-yt"><img src="/images/youtube.svg" alt="Y"> YouTube</a>
+    </div>
+
+    <section class="video-section">
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/videoseries?list=PLai45ECCqPtHeADexHAbxQ7758GsRKPl_" 
+                    title="YouTube playlist" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+</div>
+
+<footer><p>© 2026 Szakal701</p></footer>
+
+</body>
+</html>
